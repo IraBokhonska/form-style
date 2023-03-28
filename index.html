@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css/null.css">
+  <link rel="stylesheet" href="./assets/style.css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form class="container__form" action="" method="get">
+      <h1>Create an Account</h1>
+      <div class="block__user-name user-name">
+        <div class="first-name">
+          <label for="first_name">First Name</label>
+          <input id="first_name" type="text" required />
+        </div>
+        <div class="last-name">
+          <label for="last_name">Last Name</label>
+          <input id="last_name" type="text" required />
+        </div>
+      </div>
+      <div class="block__email email">
+        <label for="user_mail">E-mail</label>
+        <input id="user_mail" type="email" required />
+        <p>We'll never share your email with anyone else.</p>
+      </div>
+      <div class="block__gender gender">
+        <div class="gender-input">
+          <input id="male" type="radio" name="gender" value="male" />
+          <label class="male" for="male">Male</label>
+        </div>
+        <div class="gender-input">
+          <input id="female" type="radio" name="gender" value="female" />
+          <label class="female" for="female">Female</label>
+        </div>
+      </div>
+      <div class="block__country-city">
+        <div class="country">
+          <label for="country">Country</label>
+          <select id="country" class="style-user" name="country">
+            <option value="Ukraine">Ukraine</option>
+            <option value="USA">USA</option>
+            <option value="England">England</option>
+            <option value="Italy">Italy</option>
+          </select>
+        </div>
+        <div class="city">
+          <label for="city">City</label>
+          <input class="city" id="city" type="text" required />
+        </div>
+      </div>
+      <div class="block__sign-up">
+        <button type="submit" class="button__sign-up">Sign Up</button>
+        <p class="text__sign-up">
+          By clicking the 'Sign Up' button, you confirm that you accept our
+          <span><a href="#">Terms of Use</a></span>
+          and
+          <span><a href="#">Privacy Policy</a></span> .
+        </p>
+      </div>
+      <div class="line"></div>
+      <div class="block__log-in">
+        <p class="text__log-in">Have an account?</p>
+        <button class="button__log-in" type="submit">Log In</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>
