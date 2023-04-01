@@ -2,6 +2,7 @@ body {
 	background-color: #E5E5E5;
 	width: 100%;
 }
+
 .wrapper {
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
@@ -12,19 +13,24 @@ body {
 	color: #969696;
 }
 
-form {
+.container__form {
 	max-width: 570px;
 	min-height: 590px;
-	background-color: #FFFFFF;
+
 	padding: 35px 34px 16px 36px;
 	margin: 30px auto;
-}
+	background-color: #FFFFFF;
 
-.container__form {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	gap: 20px;
+}
+
+.block__row {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
 }
 
 h1 {
@@ -40,23 +46,30 @@ label {
 	line-height: 22px;
 	letter-spacing: -0.2px;
 	color: #545454;
-
-	margin-bottom: 7px;
 }
 
-input,
-select {
+.input,
+.select {
+	min-height: 38px;
+	width: 245px;
+	height: 38px;
+	padding: 8px 10px;
+
+	border: 1px solid #E4E4E4;
+	border-radius: 6px;
+
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 22px;
 	letter-spacing: -0.2px;
+	color: #545454;
+}
 
-	border: 1px solid #E4E4E4;
-	border-radius: 6px;
-	min-height: 38px;
-	width: 245px;
+.input:focus,
+.select:focus {
+	border: 1px solid #007BFF;	
 }
 
 button {
@@ -68,18 +81,16 @@ button {
 
 /*--------- user-name----------- */
 
-.block__user-name {
+.first-name,
+.last-name {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	gap: 12px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 7px;
 }
 
-.user-name input {
-	width: 245px;
-}
+/*------- mail--------- */
 
-/* mail */
 .block__email {
 	display: flex;
 	flex-direction: column;
@@ -87,12 +98,12 @@ button {
 	gap: 7px;
 }
 
-.email input {
+.email .input {
 	width: 100%;
 	min-height: 38px;
 }
 
-/* gender */
+/*-------- gender---------- */
 
 .block__gender {
 	display: flex;
@@ -123,7 +134,6 @@ button {
 	align-items: center;
 }
 
-
 .female::before,
 .male::before {
 	content:"" ;
@@ -151,14 +161,7 @@ button {
 	opacity: 1;
 }
 
-
 /* -------country/city----------*/
-.block__country-city {
-	display: flex;
-	flex-direction: row;
-	align-items: space-between;
-	gap: 10px;
-}
 
 .country, 
 .city {
@@ -167,15 +170,33 @@ button {
 	gap: 7px;
 }
 
+.country {
+	position: relative;
+}
+
+.select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.svg {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+
+	pointer-events: none;
+}
+
 /* ------sign-up------ */
 
 .button__sign-up {
-	text-align: center;
-	color: #FFFFFF;
-
 	padding: 8px 10px;
 	min-width: 100%;
-	min-height: 38px;
+	height: 38px;
+
+	text-align: center;
+	color: #FFFFFF;
 
 	background-color: #007BFF;
 	border: 1px solid #E4E4E4;
@@ -191,7 +212,7 @@ button {
 	text-align: center;
 }
 
-.text__sign-up span {
+.text__sign-up-blue {
 	color: #007BFF;
 }
 
@@ -202,9 +223,9 @@ button {
 }
 
 /* --------log-in---------- */
+
 .block__log-in {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	gap: 20px;
 }
@@ -219,4 +240,20 @@ button {
 .button__log-in {
 	color: #007BFF;
 	background-color: #FFFFFF;
+}
+
+/* -----media---------- */
+
+@media (max-width:569px) {
+	.block__row {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.input,
+	.select {
+		width: 100%;
+	}
 }
