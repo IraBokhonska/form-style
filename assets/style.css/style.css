@@ -237,7 +237,11 @@ button {
 	color: #545454;
 }
 
-.button__log-in {
+.link__log-in {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 22px;
+	letter-spacing: -0.1px;
 	color: #007BFF;
 	background-color: #FFFFFF;
 }

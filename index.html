@@ -50,7 +50,8 @@
           </svg>
           <label class="country-label" for="country">Country</label>
           <select id="country" class="select" name="country">
-            <option selected value="select">Select</option>
+            <option selected disabled value="select">Select</option> 
+            <!-- щоб користувач не міг вибрати опшин, що відіграє роль плейсфолдера, то можна додати атрибут disabled -->
             <option value="USA">Ukraine</option>
             <option value="England">England</option>
             <option value="Italy">USA</option>
@@ -73,7 +74,7 @@
       <div class="line"></div>
       <div class="block__log-in">
         <p class="text__log-in">Have an account?</p>
-        <button class="button__log-in" type="submit">Log In</button>
+        <a href="#" class="link__log-in" type="submit">Log In</a>
       </div>
     </form>
   </div>
